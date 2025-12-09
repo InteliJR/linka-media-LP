@@ -1,0 +1,9 @@
+# robots.txt para Linka Mídia
+User-agent: *
+Allow: /
+
+# Bloquear acesso a assets desnecessários
+Disallow: /api/
+
+# Sitemap
+Sitemap: https://linkamedia.com.br/sitemap.xml

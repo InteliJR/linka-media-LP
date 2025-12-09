@@ -6,10 +6,10 @@ import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
   // Ajustar com o nome do projeto
-  title: "NovoProjeto Docs",
-  baseUrl: "/template-repo/",
-  projectName: "template-repo",
-  tagline: "Documentação do projeto NovoProjeto",
+  title: "Linka Media Landing Page Docs",
+  baseUrl: "/linka-media-LP/",
+  projectName: "linka-media-LP",
+  tagline: "Documentação do projeto Linka Media Landing Page",
 
 
   favicon: "img/favicon.ico",
@@ -60,8 +60,7 @@ const config: Config = {
     },
     footer: {
       style: "dark",
-
-      copyright: `Copyright © ${new Date().getFullYear()} NovoProjeto, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Linka Media Landing Page, Inc. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

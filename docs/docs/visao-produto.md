@@ -4,205 +4,318 @@ sidebar_position: 2
 
 # 📄 Visão de Produto
 
-<!-- Este documento deve ser preenchido pela área de Visão de Produto para cada novo projeto. -->
-
 ## 🗓 Informações Gerais
 
-- **Nome do Projeto:** 
-<!-- Exemplo: Sistema de Gestão de Reservas para Biblioteca -->
-
-- **Cliente:** 
-<!-- Exemplo: Faculdade XYZ - Departamento de Biblioteconomia -->
-
-- **Responsável da Visão de Produto (PO):**
-<!-- Nome da pessoa responsável pelo acompanhamento e comunicação com o cliente -->
-
-- **Duração Total Estimada:** 
-<!-- Exemplo: 10 semanas -->
-
-- **Período na Etapa de Design (estimado):** 
-<!-- Exemplo: 2 semanas -->
-
-- **Período na Etapa de Desenvolvimento (estimado):** 
-<!-- Exemplo: 8 semanas -->
+- **Nome do Projeto:** Landing Page Linka Mídia
+- **Cliente:** Linka Mídia - Agência de Marketing e Publicidade
+- **Responsável da Visão de Produto (PO):** Thiago Gomes
+- **Duração Total Estimada:** 8 semanas
+- **Período na Etapa de Design (estimado):** 2 semanas
+- **Período na Etapa de Desenvolvimento (estimado):** 6 semanas
 
 ---
 
-## ✅ Checklist de Entrada (para iniciar o projeto)
+## ✅ Checklist de Entrada
 
-- [ ] Reunião de Kickoff com o cliente realizada
-- [ ] Objetivo do projeto compreendido
-- [ ] Tecnologias necessárias mapeadas
-- [ ] Estimativa de esforço feita
-- [ ] Capacidade do time verificada
-- [ ] Escopo inicial aprovado pelo cliente
+- [x] Reunião de Kickoff com o cliente realizada
+- [x] Objetivo do projeto compreendido
+- [X] Tecnologias necessárias mapeadas
+- [X] Capacidade do time verificada
+- [X] Escopo inicial aprovado pelo cliente
 
 ---
 
-## 📤 Checklist de Saída (para encaminhar o projeto às próximas áreas)
+## 📤 Checklist de Saída
 
-- [ ] Documento de Visão preenchido e validado
-- [ ] Matriz “é/não é/faz/não faz” definida
-- [ ] Wireframes (se aplicável) finalizados
-- [ ] Epics e User Stories redigidas
-- [ ] Datas de entrada/saída em cada área definidas
-- [ ] Contrato e escopo revisados e claros
-- [ ] Alinhamento com área de Design ou Desenvolvimento realizado
+- [X] Documento de Visão preenchido e validado
+- [X] Matriz "é/não é/faz/não faz" definida
+- [X] Wireframes finalizados
+- [X] Epics e User Stories redigidas
+- [X] Datas de entrada/saída em cada área definidas
+- [X] Contrato e escopo revisados e claros
+- [X] Alinhamento com área de Design ou Desenvolvimento realizado
 
 ---
 
 ## 📘 Resumo do Projeto
 
-<!-- Explique brevemente o que é o projeto, sua motivação, e o problema que resolve. -->
-
 **Descrição:**
-<!-- Exemplo: Desenvolver um sistema web para gerenciar as reservas de salas e equipamentos da biblioteca da Faculdade XYZ. -->
+Desenvolver uma landing page institucional moderna e responsiva para a Linka Mídia, agência de marketing e publicidade de Maringá-PR. O site deve comunicar autoridade, modernidade e profissionalismo, posicionando a empresa como referência completa em comunicação digital (social media, audiovisual, tráfego pago) e serviços adicionais (Google Meu Negócio, sites e landing pages).
 
 **Objetivos:**
-<!-- Exemplo: Digitalizar o processo de reservas, aumentar o controle de disponibilidade, facilitar a comunicação com os usuários. -->
+- Criar presença digital profissional que reflita a qualidade dos serviços da agência
+- Estabelecer autoridade e credibilidade no mercado de Maringá
+- Gerar leads qualificados através de formulário de contato estratégico
+- Comunicar o ciclo completo de serviços oferecidos
+- Superar a experiência genérica do site anterior
 
 **Público-Alvo:**
-<!-- Exemplo: Alunos e funcionários da biblioteca. -->
+Empresas de pequeno a médio porte de Maringá e região que buscam soluções completas de marketing digital, desde gestão de redes sociais até tráfego pago e produção audiovisual.
+
+**Principais Funcionalidades:**
+- Seções de apresentação dos serviços principais e complementares
+- Galeria/showcase de cases e trabalhos
+- Apresentação visual da equipe
+- Formulário de contato com campos estratégicos
+- Animações e scroll telling
+- Design dark theme com seções claras intercaladas
+- Otimização SEO completa
+
+---
+
+## 📚 Referências de Design e Negócio
+
+### Referências Positivas
+- **DON Digital** (https://dondigital.com.br/) - Referência estética e de estruturação de conteúdo para agências de marketing digital
+- **Full House Assessoria** (https://fullhouseassessoria.com.br/) - Referência para apresentação de equipe e formulário de contato
+
+### Referência Negativa (a ser evitada)
+- **Site anterior** (https://clientes.lipplead.com/lucas-guirado/) - Identificado como genérico, monocromático e sem personalidade de marca
+
+---
+
+## 🏗️ Estrutura da Landing Page
+
+### Seções Obrigatórias (em ordem de aparição)
+
+**1. Hero Section**
+- Headline impactante posicionando a Linka como referência em Maringá
+- Subheadline explicando o ciclo completo de comunicação
+- CTA principal direcionando para formulário
+- Animação de entrada impactante
+
+**2. Apresentação da Agência**
+- Texto institucional breve estabelecendo autoridade
+- Diferencial competitivo: ciclo completo (do início ao fim da comunicação)
+- Foco em Maringá e região
+
+**3. Serviços Principais**
+- Social Media (Gestão de Redes Sociais) - card/seção dedicada
+- Audiovisual (Videomaker) - card/seção dedicada
+- Tráfego Pago - card/seção dedicada
+- Cada serviço com descrição clara e ícone/imagem representativa
+
+**4. Serviços Complementares**
+- Seção agrupada "Serviços Extras" ou "Também Oferecemos"
+- Google Meu Negócio (configuração e consultoria)
+- Sites e Landing Pages
+- Formato mais compacto que os serviços principais
+
+**5. Cases/Portfolio (se disponível)**
+- Showcase visual de trabalhos realizados
+- Logos de clientes atendidos
+- Depoimentos (se houver)
+
+**6. Equipe**
+- Foto profissional do time (estilo Full House)
+- Nome e função dos principais membros
+- Seção humanizada transmitindo proximidade
+
+**7. Formulário de Contato**
+- Título chamativo ("Fale com a gente", "Vamos conversar?")
+- Campos: Nome, Telefone, E-mail, Faturamento (opcional, segmentado)
+- CTA no botão de envio
+- Design destacado, possivelmente em card/modal
+
+**8. Localização e Informações**
+- Endereço: Av. Carneiro Leão, 833 – Sala 04 – Zona 4
+- Telefone, E-mail, WhatsApp
+- Link para Instagram
+- Mapa incorporado (Google Maps) - opcional
+
+**9. Footer**
+- Informações de contato resumidas
+- Links de redes sociais
+- Copyright e créditos
+
+### Elementos Transversais
+
+- **Scroll Telling:** Narrativa visual ao longo do scroll
+- **Animações:** Elementos surgindo suavemente, microinterações em hover
+- **Dark/Light Alternado:** Transição entre seções escuras e claras para dinamismo
+- **CTAs Secundários:** Botões de contato em pontos estratégicos da página
+
+---
 
 ## 👤 Personas
 
-<!-- 
-Liste aqui as personas envolvidas no uso da aplicação. Não é necessário criar nomes fictícios ou descrições elaboradas — o objetivo é identificar os tipos de usuários que interagem com o sistema, suas funções ou necessidades principais.
+**Empresário/Gestor de Marketing:**
+- Busca agência completa para terceirizar toda comunicação digital
+- Valoriza autoridade, profissionalismo e resultados
+- Precisa entender rapidamente o ciclo completo de serviços
+- Quer facilidade no primeiro contato
 
-Exemplos:
-- Aluno: acessa o sistema para reservar salas e consultar reservas.
-- Funcionário da Biblioteca: administra reservas e atualiza a disponibilidade.
-- Professor: visualiza dados de alunos e solicita salas para atividades.
--->
-
-**Principais Funcionalidades:**
-<!-- Exemplo:
-- Cadastro e login de usuários
-- Reserva de equipamentos
-- Notificações por e-mail
-- Painel administrativo -->
+**Tomador de Decisão de Empresa Local:**
+- Foca em parceiros regionais de Maringá
+- Valoriza transparência e equipe visível
+- Busca soluções que transmitam modernidade e inovação
 
 ---
 
 ## 🧩 Matriz "É / Não É / Faz / Não Faz"
-<div align="center">
 
 | Categoria  | Descrição |
 |-----------|-----------|
-| **É**     | <!-- Ex: Uma aplicação web acessível por desktop e mobile --> |
-| **Não É** | <!-- Ex: Um aplicativo nativo para celular --> |
-| **Faz**   | <!-- Ex: Permite reservas de salas, equipamentos, exporta relatórios em PDF --> |
-| **Não Faz** | <!-- Ex: Controle de acesso físico aos espaços da biblioteca --> |
-
-</div>
+| **É** | Uma landing page institucional responsiva com design moderno, dark theme predominante, animações e scroll telling que comunica autoridade e profissionalismo |
+| **Não É** | Um site com múltiplas páginas, blog, área de cliente, ou portal completo com funcionalidades complexas |
+| **Faz** | Apresenta serviços (principais e complementares), exibe equipe, captura leads via formulário estratégico, otimização SEO, animações interativas |
+| **Não Faz** | E-commerce, sistema de agendamento, área administrativa, chat em tempo real, integração com CRM externo |
 
 ---
 
 ## 🧠 Matriz de Certezas, Suposições e Dúvidas
 
-<!--
-Esta matriz deve ser utilizada para mapear o que já sabemos com segurança (certezas), o que acreditamos mas ainda precisa ser validado (suposições), e o que ainda não sabemos ou precisa ser investigado (dúvidas).
-
-Ela pode ser preenchida em diferentes momentos:
-- Logo após a reunião de repasse da área de vendas;
-- Durante o processo de elaboração do escopo com o cliente;
-- Sempre que surgirem novas informações relevantes.
-
-Essa matriz é útil para orientar as conversas com o cliente, levantar riscos, validar premissas e organizar pontos pendentes.
--->
-
-<div align="center">
-
-| Tipo        | Descrição                                                                |
-|-------------|--------------------------------------------------------------------------|
-| **Certeza**   | <!-- Ex: O sistema deve ter autenticação via e-mail institucional -->    |
-| **Suposição** | <!-- Ex: Acreditamos que o sistema será usado principalmente via mobile --> |
-| **Dúvida**    | <!-- Ex: O cliente precisa de integração com sistema acadêmico? -->      |
-
-</div>
+| Tipo        | Descrição |
+|-------------|-----------|
+| **Certeza** | Dark theme predominante com seções claras intercaladas; Endereço: Av. Carneiro Leão, 833 – Sala 04 – Zona 4; Formulário com nome, número, e-mail e faturamento (opcional); Foto da equipe obrigatória; Responsividade total; SSG para SEO |
+| **Certeza** | Serviços principais: Social Media, Audiovisual, Tráfego Pago; Serviços extras: Google Meu Negócio, Sites/Landing Pages (agrupados, não listados individualmente) |
+| **Suposição** | Cliente fornecerá fotos profissionais da equipe; Materiais visuais (logos de clientes, imagens) serão fornecidos em alta qualidade; Nome dos integrantes e cargos serão disponibilizados |
+| **Dúvida** | Informações de contato completas (telefone, e-mail corporativo, Instagram) - aguardando envio; Conteúdo textual das seções (descrições, títulos, chamadas); Segmentação exata do campo faturamento no formulário |
 
 ---
-
 
 ## 🧱 Epics e User Stories
 
 ### 🔹 Epics
 
-<!-- Exemplo: -->
-- Epic 1: Gerenciamento de Usuários
-- Epic 2: Sistema de Reservas
-- Epic 3: Notificações e Alertas
-- Epic 4: Relatórios
+- **Epic 1:** Hero Section e Identidade Visual
+- **Epic 2:** Apresentação de Serviços
+- **Epic 3:** Showcase e Credibilidade
+- **Epic 4:** Equipe e Contato
+- **Epic 5:** SEO e Performance
 
 ### 🔸 User Stories
 
-<!-- Exemplo de User Story: -->
 #### US1
-- **Usuário:** Como um aluno
-- **Objetivo:** Quero reservar uma sala de estudo
-- **Justificativa:** Para garantir que terei um espaço disponível no horário desejado
-
-<br/>
+- **Usuário:** Como visitante empresário
+- **Objetivo:** Quero entender imediatamente o que a agência faz
+- **Justificativa:** Para decidir rapidamente se a Linka Mídia atende minhas necessidades
 
 #### US2
-- **Usuário:** Como um professor
-- **Objetivo:** Quero ver os alunos da minha turma
-- **Justificativa:** Para garantir que consigo acompanhá-los granularmente durante o ano letivo
+- **Usuário:** Como potencial cliente
+- **Objetivo:** Quero ver os serviços organizados de forma clara
+- **Justificativa:** Para compreender o ciclo completo oferecido e identificar o que preciso
 
-<!-- Repetir para cada funcionalidade importante -->
+#### US3
+- **Usuário:** Como visitante interessado
+- **Objetivo:** Quero conhecer a equipe por trás da agência
+- **Justificativa:** Para criar confiança e sentir proximidade com a empresa
+
+#### US4
+- **Usuário:** Como tomador de decisão
+- **Objetivo:** Quero entrar em contato de forma rápida fornecendo informações relevantes
+- **Justificativa:** Para receber um atendimento personalizado baseado no perfil da minha empresa
+
+#### US5
+- **Usuário:** Como empresário buscando no Google
+- **Objetivo:** Quero encontrar a agência em buscas por "agência marketing Maringá"
+- **Justificativa:** Para descobrir soluções de marketing na minha região
+
+#### US6
+- **Usuário:** Como visitante em dispositivo móvel
+- **Objetivo:** Quero navegar no site com a mesma qualidade do desktop
+- **Justificativa:** Para acessar informações de qualquer lugar e tomar decisões
 
 ---
 
 ## ⚙️ Requisitos Funcionais
 
-<!-- 
-Liste os requisitos funcionais do sistema, ou seja, o que o sistema deve fazer de forma objetiva. Pense em ações, comportamentos e regras que precisam estar presentes no produto final.
+### Hero Section
+- RF01 - Apresentar headline impactante comunicando autoridade em Maringá
+- RF02 - Exibir call-to-action principal direcionando para formulário de contato
+- RF03 - Implementar animações de entrada sutis e profissionais
 
-Os Requisitos Funcionais (RFs) podem ser:
-- Inferidos a partir de User Stories.
-- Traduções técnicas de uma US, visando o ponto de vista da implementação.
-- Divisões mais específicas e técnicas de uma única US (ou seja, uma US pode originar vários RFs).
+### Serviços
+- RF04 - Apresentar três serviços principais (Social Media, Audiovisual, Tráfego Pago) com destaque visual
+- RF05 - Agrupar serviços complementares (Google Meu Negócio, Sites/Landing Pages) em seção de "Serviços Extras"
+- RF06 - Implementar scroll telling para apresentação progressiva dos serviços
 
-Enquanto as US estão centradas nas necessidades do usuário, os RFs são mais voltados à engenharia e ao desenvolvimento. Servem como base para orientar o time técnico na hora de implementar funcionalidades específicas.
--->
+### Credibilidade
+- RF07 - Exibir logos ou cases de clientes em formato visual atrativo
+- RF08 - Apresentar seção "Sobre" explicando posicionamento como referência completa
 
-<!-- Dica 1: Numerar os requisitos ajuda na rastreabilidade durante o projeto. -->
+### Equipe
+- RF09 - Exibir foto da equipe em alta qualidade com design moderno
+- RF10 - Apresentar nome e função dos membros principais
 
-<!-- Dica 2: Agrupar os RFs por página ou outro tipo de agrupamento pode ser muito útil. -->
+### Formulário de Contato
+- RF11 - Campos obrigatórios: nome, número de telefone, e-mail
+- RF12 - Campo opcional: faturamento mensal (segmentado em faixas)
+- RF13 - Validação de campos obrigatórios antes do envio
+- RF14 - Feedback visual de envio bem-sucedido
 
-<!-- 
-### Exemplo de Formato:
+### Localização e Contato
+- RF15 - Exibir endereço: Av. Carneiro Leão, 833 – Sala 04 – Zona 4
+- RF16 - Links para redes sociais (Instagram especialmente)
+- RF17 - Informações de telefone e e-mail (a serem fornecidas)
 
-RF01 - O sistema deve permitir que usuários se cadastrem utilizando nome, e-mail institucional e senha.
-RF02 - O sistema deve permitir a criação de reservas de salas com data, horário e descrição.
-RF03 - O administrador deve poder visualizar e aprovar reservas pendentes.
-RF04 - O sistema deve enviar um e-mail automático de confirmação após uma reserva ser realizada.
--->
+### SEO e Performance
+- RF18 - Implementar SSG (Static Site Generation) para performance
+- RF19 - Configurar robots.txt e sitemap.xml
+- RF20 - Meta tags completas (title, description, OG tags) em todas as seções
+- RF21 - Structured data para informações da empresa
 
-<!-- Preencha abaixo com os requisitos do seu projeto -->
+### Design e UX
+- RF22 - Dark theme predominante com seções claras estratégicas
+- RF23 - Animações de scroll e microinterações
+- RF24 - Transições suaves entre seções
+- RF25 - Design que transmita elegância, modernidade e autoridade
 
-- RF01 - 
-- RF02 - 
-- RF03 - 
-- RF04 - 
+---
 
 ## 📱 Responsividade
 
 **O projeto será responsivo?**
-- [ ] Sim
-- [ ] Não
+- [x] Sim
 
 **Se sim, até qual ponto?**
-- [ ] Mobile-first
-- [ ] Adaptável para tablets
-- [ ] Desktops Grandes e notebooks menores
-- [ ] Totalmente responsivo (desktop, tablet, mobile)
+- [x] Adaptável para tablets
+- [x] Desktops Grandes e notebooks menores
+- [x] Totalmente responsivo (desktop, tablet, mobile)
+
+---
+
+## 🎨 Diretrizes de Design
+
+### Paleta de Cores
+- Dark theme como base (fundo escuro)
+- Seções claras intercaladas para contraste e dinamismo
+- Cores de destaque para CTAs e elementos interativos
+
+### Tipografia
+- Fontes modernas que transmitam autoridade e profissionalismo
+- Hierarquia clara entre títulos, subtítulos e corpo de texto
+
+### Elementos Visuais
+- Animações sutis mas impactantes
+- Scroll telling para narrativa envolvente
+- Espaçamento generoso (breathing room)
+- Imagens em alta qualidade
+
+### Inspiração
+- Evitar monocromia excessiva (problema do site anterior)
+- Buscar contraste dinâmico entre seções dark/light
+- Microinterações nos elementos interativos
 
 ---
 
 ## 📌 Observações Finais
 
-<!-- Qualquer observação relevante, como restrições legais, técnicas, dependências externas ou riscos conhecidos. -->
+### Dependências Externas
+- Cliente fornecerá informações completas de contato (telefone, e-mail, Instagram)
+- Cliente fornecerá documento de identidade visual
+- Cliente enviará fotos profissionais da equipe
+- Conteúdos textuais precisam ser definidos (títulos, descrições, bio da empresa)
+- Logos de clientes/parceiros para showcase (se houver)
 
----
+### Considerações Técnicas
+- Stack recomendada: Next.js ou similar com SSG
+- Hospedagem otimizada para performance (Vercel, Netlify)
+- Integração do formulário (definir serviço: EmailJS, Formspree, webhook)
 
+### Critérios de Sucesso
+- Site carrega em menos de 3 segundos
+- Score Lighthouse acima de 90 (Performance, SEO, Acessibilidade)
+- 100% responsivo sem quebras visuais
+- Formulário com taxa de conversão mensurável
+- Feedback positivo do cliente na entrega

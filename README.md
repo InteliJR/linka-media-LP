@@ -1,99 +1,90 @@
-# 📘 Nome do Projeto
+# 🎨 Landing Page Linka Mídia
 
-<!--
-Breve descrição do projeto, incluindo o objetivo, nome do cliente e o setor envolvido.
--->
+Landing page institucional moderna para a Linka Mídia, agência de marketing digital de Maringá-PR. Site com dark theme, animações, scroll telling e otimização SEO completa.
 
-Exemplo: _Aplicação web para gestão de processos internos da Empresa X, no setor de logística._
-
-Acesse a solução por meio deste [🔗 Link](https://www.nasa.gov/)
+**[🔗 Acessar site em produção](https://linkamedia.com.br)**
 
 ---
 
 ## 📄 Documentação
 
-A documentação completa do projeto pode ser acessada através do link abaixo:  
+Documentação completa do projeto (Visão de Produto, Tecnologias, Design):
 
-**[Template de Documentação](https://intelijr.github.io/template-repo/)**
-
-> A documentação é mantida utilizando o [Docusaurus](https://docusaurus.io/). Para informações sobre como configurar e manter a documentação, consulte o [guia de configuração](./docs/README.md).
+**[📚 Documentação Técnica](https://intelijr.github.io/linka-media-LP/)**
 
 ---
 
-## 🚀 Tecnologias Utilizadas
+## 🚀 Tecnologias
 
-<!-- Liste aqui as principais tecnologias utilizadas no projeto.  -->
-
-
-- React
-- Node.js
-- PostgreSQL
-- Figma
-- TailwindCSS
+- **Next.js 15** - Framework React com SSG
+- **TypeScript** - Tipagem estática
+- **Tailwind CSS** - Estilização
+- **Framer Motion** - Animações
+- **Vercel** - Deploy e hospedagem
 
 ---
 
-## 🛠️ Como Rodar o Projeto
+## 📋 Pré-requisitos
 
-<!-- Passos para rodar o projeto.   -->
-Exemplo:
+- Node.js 18+ 
+- npm ou yarn
+- Conta Vercel (para deploy)
+
+---
+
+## 🛠️ Como Rodar
 
 ```bash
 # Clone o repositório
-git clone https://github.com/inteli-junior/nomedoprojeto.git
+git clone https://github.com/intelijr/linka-media-LP.git
+cd linka-media-LP
 
-# Acesse o diretório do projeto
-cd nomedoprojeto
-
-# Instale as dependências do backend
-cd backend
+# Instale as dependências
 npm install
 
-# Inicie o servidor backend
-npm run dev
+# Configure variáveis de ambiente (opcional)
+# Copie .env.example para .env.local e preencha as chaves necessárias
 
-# Em outro terminal, vá para o frontend
-cd ../frontend
-npm install
+# Rode em desenvolvimento
 npm run dev
+# Acesse http://localhost:3000
+
+# Build para produção
+npm run build
+npm start
 ```
 
 ---
 
-## 🗂️ Estrutura de Diretórios
+## 📁 Estrutura
 
-```bash
+```
 .
-├── .github/                       # Configurações de CI/CD e templates de PR
+├── public/
+│   ├── images/           # Imagens e assets
+│   └── robots.txt        # SEO
 │
-├── backend/                       # Código backend (Node.js, Python, etc)
+├── src/
+│   ├── app/              # Páginas e layouts Next.js
+│   ├── components/       # Componentes React
+│   │   ├── sections/     # Seções da landing page
+│   │   ├── forms/        # Formulário de contato
+│   │   └── ui/           # Componentes reutilizáveis
+│   ├── lib/              # Utilitários
+│   └── types/            # TypeScript types
 │
-├── frontend/                      # Código frontend (React, Next.js, etc)
-│
-├── docs/                          # Documentação Docusaurus
-│   ├── docs/
-│   │   ├── visao-produto.md       # Documento elaborado pela área de Visão de Produto
-│   │   ├── design.md              # Documento elaborado pela área de Design
-│   │   ├── desenvolvimento.md     # Documento elaborado pela área de Desenvolvimento
-│
-├── .gitignore                     # Arquivos ignorados pelo Git
-└── README.md                      # Este documento
+├── docs/                 # Documentação Docusaurus
+└── README.md
 ```
 
 ---
 
 ## 👥 Time do Projeto
 
-Conheça quem participou do desenvolvimento deste projeto:
+- **[Scrum Master e Desenvolvedor]**  
+  [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/catarinaSayuri)
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rodrigo-ferraz-b8a946244/)
 
-- **Nome da Pessoa 1**  
-  [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/usuario1)
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/usuario1)
-
-- **Nome da Pessoa 2**  
-  [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/usuario2)
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/usuario2)
-
-- **Nome da Pessoa 3**  
-  [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/usuario3)
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/usuario3)
+- **[Desenvolvedora]**  
+  [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/usuario)
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/catarina-sayuri/)

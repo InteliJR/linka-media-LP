@@ -1,0 +1,36 @@
+.heroContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 80px;
+  background-color: #08070b;
+  min-height: 80vh;
+}
+
+.title {
+  color: white;
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+
+.highlight {
+  color: #9272f1;
+  font-weight: 600; 
+}
+
+.description {
+  color: white;
+  font-size: 18px;
+  max-width: 600px;
+  margin-bottom: 50px;
+  font-weight: 500;
+}
+
+.whiteText {
+  color: white;
+}

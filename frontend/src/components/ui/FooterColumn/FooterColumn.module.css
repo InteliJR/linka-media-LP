@@ -1,0 +1,35 @@
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.title {
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+  .column {
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .content {
+    align-items: center;
+    gap: 10px;
+  }
+}

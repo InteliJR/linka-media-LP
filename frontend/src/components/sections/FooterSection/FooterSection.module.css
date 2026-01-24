@@ -1,0 +1,163 @@
+.footer {
+  background-color: #9272f1;
+  color: #ffffff;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+  padding: 50px 20px 30px;
+  position: relative;
+  z-index: 10;
+  margin-top: 50px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; 
+  flex-wrap: wrap;
+  gap: 40px;
+  padding-bottom: 30px;
+}
+
+/* --- COLUNAS --- */
+.column {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+.logoColumn {
+  align-items: center;
+  justify-content: center;
+  align-self: center; 
+}
+
+.logoImg {
+  width: 220px;
+  height: auto;
+  object-fit: contain;
+}
+
+.columnTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  font-size: 1rem;
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.9;
+  transition: opacity 0.2s;
+}
+
+.infoItem:hover {
+  opacity: 1;
+}
+
+/* --- ÍCONES SOCIAIS --- */
+.socialWrapper {
+  display: flex;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.socialLink:hover {
+  background-color: white;
+  color: #9272f1;
+  border-color: white;
+}
+
+/* --- DIVISÓRIA --- */
+.divider {
+  width: 70%;
+  height: 2px;
+  background-color: white;
+  margin: 0 auto 30px auto;
+  border-radius: 2px;
+}
+
+/* --- RODAPÉ INFERIOR --- */
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    padding-top: 40px;
+  }
+  
+  .container {
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+  }
+
+  .logoColumn {
+    align-self: auto; 
+    margin-bottom: 30px;
+  }
+
+  .logoImg {
+    width: 180px;
+  }
+
+  .infoItem {
+    justify-content: center;
+  }
+  
+  .copyright {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .infoItem svg {
+    display: none;
+  }
+
+  .infoItem {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .infoItem span {
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  .column {
+    align-items: center;
+    text-align: center;
+  }
+
+}
+

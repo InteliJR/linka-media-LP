@@ -1,0 +1,38 @@
+.section {
+  padding: 100px 0;
+  background-color: #000;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.titleWrapper {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.titleWrapper h1,
+.titleWrapper h2,
+.titleWrapper span {
+  font-family: 'Aileron', sans-serif !important;
+  font-weight: 600 !important; 
+}
+
+.carouselWrapper {
+  width: 100%;
+  max-width: 1400px; 
+  margin-top: 60px;
+  padding: 0 20px;
+}
+
+:global(.swiper) {
+  width: 100%;
+  padding-bottom: 40px;
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+}

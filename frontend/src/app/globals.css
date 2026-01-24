@@ -3,5 +3,13 @@ body {
   padding: 0;
   background-color: #08070b;
   color: white;
-  font-family: sans-serif; /* Ou a fonte que você preferir */
+  font-family: sans-serif; 
+}
+
+.section {
+  padding: 60px 0;
+}
+
+.section-tight {
+  padding-top: 20px;
 }

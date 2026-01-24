@@ -1,29 +1,37 @@
-// src/components/sections/TrustSection.tsx
-'use client'
-import { motion } from 'framer-motion';
+import { Title } from '@/components/ui/Title/Title';
+import { TrustLogos } from '../../ui/TrustSectionComponents/TrustLogos/TrustLogos';
+import { TrustText } from '../../ui/TrustSectionComponents/TrustText/TrustText';
+import { TrustForm } from '../../ui/TrustSectionComponents/TrustForm/TrustForm';
+import { TrustBackground } from '../../ui/TrustSectionComponents/TrustBackground/TrustBackground';
 
-export function TrustSection() {
-  // Substitua pelos caminhos reais das suas imagens em /public
-  const logos = ['/logo1.png', '/logo2.png', '/logo3.png', '/logo4.png', '/logo5.png'];
+import styles from './TrustSection.module.css';
 
+export default function TrustSection() {
   return (
-    <section className="bg-background py-10 opacity-60">
-      <div className="max-w-5xl mx-auto px-4 text-center">
-        <p className="text-gray-400 mb-8 text-sm uppercase tracking-widest">
-          Empresas que <span className="text-primary font-semibold">confiam</span> em nós
-        </p>
-        <div className="flex flex-wrap justify-center gap-8 md:gap-16 items-center grayscale brightness-200">
-          {logos.map((logo, i) => (
-            <motion.img 
-              key={i} 
-              src={logo} 
-              alt="Parceiro" 
-              className="h-8 md:h-10 object-contain"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 0.7 }}
-            />
-          ))}
+    <section id="trust-section" className={styles.container}>
+      
+      {/* --- PARTE 1: TOPO (Título + Carrossel) --- */}
+      <div className={styles.topSection}>
+        <div className={styles.titleWrapper}>
+          <Title whiteText="Empresas que" purpleText="confiam em nós" />
         </div>
+        
+        {/* Componente do Carrossel Isolado */}
+        <TrustLogos />
+      </div>
+
+      {/* --- PARTE 2: INFERIOR (Background + Texto + Form) --- */}
+      <div className={styles.contentContainer}>
+        
+        {/* Tomadas (Fundo) */}
+        <TrustBackground />
+
+        {/* Grid (Frente) */}
+        <div className={styles.gridSplit}>
+          <TrustText />
+          <TrustForm />
+        </div>
+
       </div>
     </section>
   );

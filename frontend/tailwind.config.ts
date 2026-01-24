@@ -7,7 +7,6 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Roxo vibrante exato da imagem
         'linka-purple': '#9272f1', 
         'linka-black': '#08070b',
       },

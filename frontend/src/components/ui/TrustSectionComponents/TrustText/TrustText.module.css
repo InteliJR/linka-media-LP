@@ -1,0 +1,32 @@
+.container {
+  max-width: 480px;
+  position: relative;
+
+}
+
+.ctaTitle {
+  font-family: 'Inter', 'Aileron', sans-serif; 
+  font-size: 46px;
+  font-weight: 700;
+  color: white;
+  line-height: 1.1;
+  margin-bottom: 32px;
+}
+
+.highlightPurple {
+  color: #9272f1;
+}
+
+.ctaDescription {
+  font-family: 'Inter', 'Aileron', sans-serif;
+  font-size: 18px;
+  color: #cccccc;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .container {
+    text-align: center;
+    margin: 0 auto;
+  }
+}

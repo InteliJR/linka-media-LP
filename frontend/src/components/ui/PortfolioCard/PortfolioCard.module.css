@@ -1,0 +1,46 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%; 
+  max-width: 400px; 
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.imageWrapper {
+  width: 100%;
+  height: 500px; 
+  border-radius: 40px;
+  overflow: hidden;
+  background-color: #1a1a1a;
+  position: relative;
+}
+
+.card:hover .imageWrapper {
+  box-shadow: 0 0 20px rgba(146, 114, 241, 0.3);
+}
+
+.caseImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .caseImage {
+  transform: scale(1.05);
+}
+
+.clientName {
+  color: white;
+  font-family: 'Aileron', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center; 
+}

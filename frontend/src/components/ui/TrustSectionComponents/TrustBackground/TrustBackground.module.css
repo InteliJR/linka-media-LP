@@ -11,15 +11,15 @@
 .plugImage {
   position: absolute;
   top: 45%;
-  left: -140px;
+  left: -165px;
   width: 440px; 
   height: auto;
 }
 
 .receptorImage {
   position: absolute;
-  bottom: -100px;
-  right: -140px;
+  bottom: -120px;
+  right: -160px;
   width: 1000px; 
 }
 

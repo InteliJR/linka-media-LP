@@ -26,7 +26,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main style={{ backgroundColor: '#08070b', minHeight: '100vh', overflowX: 'hidden' }}>
+    <main style={{ backgroundColor: '#000', minHeight: '100vh', overflowX: 'hidden' }}>
 
       <HeroSection />
 

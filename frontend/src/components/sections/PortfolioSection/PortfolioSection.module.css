@@ -1,14 +1,16 @@
 .section {
-  padding: 100px 0;
+  padding: 100px 0 0px 0; 
   background-color: #000;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow: hidden;
+  margin-bottom: 0; 
 }
 
 .titleWrapper {
+  margin-top: 20px; 
   margin-bottom: 20px;
   text-align: center;
 }
@@ -23,13 +25,13 @@
 .carouselWrapper {
   width: 100%;
   max-width: 1400px; 
-  margin-top: 60px;
+  margin-top: 40px; 
   padding: 0 20px;
 }
 
 :global(.swiper) {
   width: 100%;
-  padding-bottom: 40px;
+  padding-bottom: 10px; 
 }
 
 .slide {

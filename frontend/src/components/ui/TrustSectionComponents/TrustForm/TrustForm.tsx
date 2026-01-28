@@ -5,7 +5,6 @@ import emailjs from "@emailjs/browser";
 import styles from "./TrustForm.module.css";
 import Button from "../../Button/Button";
 
-// Inicializa EmailJS
 if (typeof window !== "undefined") {
   emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!);
 }
@@ -141,7 +140,8 @@ export function TrustForm() {
 
       <Button
         text={isLoading ? "Enviando..." : "QUERO MAIS RESULTADOS!"}
-        disabled={isLoading}
+        isLoading={isLoading}
+        type="submit"
       />
     </form>
   );

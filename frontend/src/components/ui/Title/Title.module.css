@@ -1,0 +1,23 @@
+.title {
+  font-family: 'Aileron', sans-serif;
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  margin: 0;
+  padding: 0;
+}
+
+.purpleText {
+  color: #9272f1;
+  font-weight: 900;
+}
+
+.centered {
+  text-align: center;
+}
+
+.left {
+  text-align: left;
+}

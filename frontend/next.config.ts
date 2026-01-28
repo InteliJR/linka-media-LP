@@ -1,20 +1,16 @@
-const nextConfig = {
-  // GARANTIR SSG (Static Site Generation)
-  output: 'export', // Gera site 100% estático
-  
-  // Otimização de imagens
-  images: {
-    unoptimized: true, // Necessário para 'output: export'
-    formats: ['image/avif', 'image/webp'],
-  },
-  
-  // Remover console.log em produção
-  compiler: {
-    removeConsole: process.env.NODE_ENV === 'production',
-  },
-  
-  // Trailing slash para compatibilidade
-  trailingSlash: true,
-}
+import type { Config } from "tailwindcss";
 
-module.exports = nextConfig
+const config: Config = {
+  content: ["./src/**/*.{ts,tsx}"],
+  theme: {
+    extend: {
+      colors: {
+        background: '#08070b',
+        'linka-purple': '#9272f1',
+        'linka-card': '#161616',
+      },
+    },
+  },
+  plugins: [],
+};
+export default config;

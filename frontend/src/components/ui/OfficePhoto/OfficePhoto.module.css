@@ -1,0 +1,14 @@
+.photoCard {
+  border-radius: 35px; 
+  overflow: hidden;
+  aspect-ratio: 3 / 4.5; 
+  width: 100%;
+  background-color: #161616;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}

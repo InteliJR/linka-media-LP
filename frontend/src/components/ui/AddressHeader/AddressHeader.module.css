@@ -1,0 +1,41 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.titleWrapper {
+  margin-bottom: 10px;
+}
+
+.titleWrapper h1, 
+.titleWrapper h2, 
+.titleWrapper span {
+  font-weight: 600 !important;
+}
+
+.addressWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 30px;
+  color: #BBBABD;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .addressWrapper {
+    flex-direction: column;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .addressWrapper svg {
+    display: none;
+  }
+}

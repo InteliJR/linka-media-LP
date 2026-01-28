@@ -1,0 +1,88 @@
+.formCard {
+  background-color: #161616;
+  padding: 40px;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.7); 
+  width: 90%;
+  max-width: 500px;
+  box-sizing: border-box;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.rowInputs {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+.group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.halfGroup {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.input, .textarea {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #262626;
+  border: 1px solid #333333;
+  border-radius: 10px;
+  padding: 16px 20px;
+  color: #e0e0e0;
+  font-size: 15px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.input:focus, .textarea:focus {
+  background-color: #2e2e2e;
+  border-color: #9272f1;
+}
+
+.textarea {
+  resize: none;
+  min-height: 140px;
+}
+
+.submitButton {
+  background-color: #9272f1;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 18px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  width: 100%;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+.submitButton:hover {
+  background-color: #7a5ce0;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+  .rowInputs { flex-direction: column; }
+  .formCard { margin: 0 auto; }
+}

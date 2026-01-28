@@ -8,7 +8,7 @@ import styles from './TrustSection.module.css';
 
 export default function TrustSection() {
   return (
-    <section id="trust-section" className={styles.container}>
+    <section className={styles.container}>
       
       {/* --- PARTE 1: TOPO (Título + Carrossel) --- */}
       <div className={styles.topSection}>
@@ -21,7 +21,7 @@ export default function TrustSection() {
       </div>
 
       {/* --- PARTE 2: INFERIOR (Background + Texto + Form) --- */}
-      <div className={styles.contentContainer}>
+      <div id="trust-section" className={styles.contentContainer}>
         
         {/* Tomadas (Fundo) */}
         <TrustBackground />

@@ -42,7 +42,7 @@ const teamData = [
   { 
     name: "Annet Pavlova", 
     role: "Videomaker", 
-    image: "/images/time/Annet Pavlova - Videomaker.png" 
+    image: "/images/time/Annet Pavlova - Videomaker.PNG" 
   },
   { 
     name: "Pablo Okawa", 

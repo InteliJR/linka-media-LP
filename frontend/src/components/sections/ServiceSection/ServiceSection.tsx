@@ -13,13 +13,11 @@ export default function ServiceSection() {
       title: "Performance",
       description: "Não é apenas gestão de tráfego pago. Planejamos, analisamos e otimizamos campanhas em Meta e Google com foco em performance, acompanhando métricas, resultados comerciais e ajustes constantes, sempre alinhados à estratégia e com relatórios claros e objetivos.",
       icon: <BarChart3 size={24} />
-
     },
     {
       title: "Audiovisual",
       description: "Conteúdo com qualidade profissional e alto impacto visual. Roteirizamos, gravamos e editamos com equipe própria, utilizando equipamentos de ponta, iluminação profissional e drone para elevar o posicionamento da sua marca.",
       icon: <Video size={24} />
-
     },
     {
       title: "Complementares",
@@ -27,6 +25,7 @@ export default function ServiceSection() {
       icon: <PlusSquare size={24} />
     }
   ];
+
   return (
     <section className={styles.container}>
       <div className={styles.introBox}>
@@ -44,7 +43,14 @@ export default function ServiceSection() {
 
       <div className={styles.grid}>
         {services.map((s, i) => (
-          <ServiceCard key={i} {...s} />
+
+          <div 
+            key={i} 
+            className={styles.cardWrapper}
+            style={{ '--index': i } as React.CSSProperties}
+          >
+            <ServiceCard {...s} />
+          </div>
         ))}
       </div>
     </section>

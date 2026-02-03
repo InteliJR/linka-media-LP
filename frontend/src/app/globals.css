@@ -11,9 +11,7 @@ body {
 }
 
 .section {
-  padding: 60px 0;
+  padding:0;
 }
 
-.section-tight {
-  padding-top: 20px;
-}
+

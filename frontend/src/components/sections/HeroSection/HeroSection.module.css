@@ -5,11 +5,13 @@
   align-items: center;
   justify-content: flex-start; 
   text-align: center;
-  min-height: 100vh;
-  background-color: #000;
-  padding-top: 80px; 
-  overflow: hidden;
 
+  min-height: auto; 
+  padding-bottom: 80px; 
+
+  background-color: #000;
+  padding-top: 140px; 
+  overflow: hidden;
 }
 
 .bgWrapper {

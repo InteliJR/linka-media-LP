@@ -13,6 +13,7 @@ import ServiceSection from "@/components/sections/ServiceSection/ServiceSection"
 import TeamSection from "@/components/sections/TeamSection/TeamSection";
 import TrustSection from "@/components/sections/TrustSection/TrustSection";
 import { VideoSection } from "@/components/sections/VideoSection/VideoSection";
+import LogoSection from '@/components/sections/LogoSection/LogoSection';
 
 export default function Home() {
 
@@ -26,11 +27,16 @@ export default function Home() {
   }, []);
 
   return (
-    <main style={{ backgroundColor: '#000', minHeight: '100vh', overflowX: 'hidden' }}>
+
+    <main style={{ backgroundColor: '#000', minHeight: '100vh', overflowX: 'clip' }}>
 
       <HeroSection />
 
-      <div className="section section-tight" data-aos="fade-up">
+      <div>
+         <LogoSection />
+       </div>
+
+      <div>
         <ServiceSection />
       </div>
 
@@ -50,14 +56,13 @@ export default function Home() {
         <TeamSection />
       </div>
 
-      <div className="section section-tight" data-aos="fade-up">
+      <div data-aos="fade-up">
         <OfficeSection />
       </div>
 
       <div data-aos="fade-in">
         <FooterSection />
       </div>
-
 
     </main>
   );

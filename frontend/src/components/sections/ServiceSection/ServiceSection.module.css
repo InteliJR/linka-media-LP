@@ -1,14 +1,21 @@
+/* ================= */
+/* GLOBAL / DESKTOP  */
+/* ================= */
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #000;
+  overflow: visible !important; 
+  position: relative;
+  padding-bottom: 80px;
 }
 
 .introBox {
   text-align: center;
   max-width: 1100px;
   margin-bottom: 16px;
+  padding: 0 20px;
 }
 
 .introText {
@@ -50,49 +57,66 @@
   justify-items: center; 
 }
 
-
-/* ================= */
-/* NOTEBOOK (≤1024)  */
-/* ================= */
-@media (max-width: 1024px) {
-  .grid {
-    column-gap: 48px;
-  }
-
-  .sectionTitle {
-    margin-bottom: 48px;
-  }
+.cardWrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
-/* ================= */
-/* TABLET (≤768px)   */
-/* ================= */
+/* ================================================= */
+/* MOBILE (TABLET E CELULAR) - A CORREÇÃO ESTÁ AQUI  */
+/* ================================================= */
 @media (max-width: 768px) {
+  
+  .container {
+    display: block !important; 
+    height: auto !important;
+    padding-bottom: 150px;
+  }
+
+
+  .introBox {
+    margin: 0 auto 20px auto;
+    padding-top: 40px;
+  }
+
   .grid {
-    grid-template-columns: 1fr;
-    row-gap: 32px;
+    display: block !important; 
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+  }
+  .cardWrapper {
+    position: -webkit-sticky !important; 
+    position: sticky !important;
+    
+
+    top: calc(100px + (var(--index) * 20px));
+    
+    padding-bottom: 60px; 
+    
+    z-index: calc(10 + var(--index));
+    
+    display: flex;
+    justify-content: center;
   }
 
-  .introText {
-    font-size: 1.6rem;
-  }
-
-  .sectionTitle {
-    font-size: 2.2rem;
-    margin-bottom: 40px;
-  }
-
-  .divider {
-    margin-bottom: 40px;
+  .cardWrapper > div {
+    background-color: #1a1a1a !important; 
+    box-shadow: 0 -10px 30px rgba(0,0,0,1) !important; 
+    border: 1px solid #333; 
   }
 }
+
 
 @media (max-width: 480px) {
-  .introText {
-    font-size: 1.4rem;
-  }
-
   .sectionTitle {
     font-size: 2rem;
+    margin-bottom: 40px;
+  }
+  
+  .cardWrapper {
+    top: calc(90px + (var(--index) * 15px));
   }
 }

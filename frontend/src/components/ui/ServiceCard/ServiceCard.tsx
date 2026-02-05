@@ -5,11 +5,12 @@ import styles from './ServiceCard.module.css';
 
 interface ServiceCardProps {
   title: string;
+  subtitle: string; // <--- ADICIONE ISSO
   description: string;
   icon: React.ReactNode;
 }
 
-export const ServiceCard = ({ title, description, icon }: ServiceCardProps) => {
+export const ServiceCard = ({ title, subtitle, description, icon }: ServiceCardProps) => {
   const cardRef = useRef<HTMLDivElement>(null);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -36,6 +37,10 @@ export const ServiceCard = ({ title, description, icon }: ServiceCardProps) => {
       </div>
       
       <h3 className={styles.title}>{title}</h3>
+      
+      {/* <--- ADICIONE O SUBTÍTULO AQUI */}
+      <h4 className={styles.subtitle}>{subtitle}</h4> 
+      
       <p className={styles.description}>{description}</p>
     </div>
   );

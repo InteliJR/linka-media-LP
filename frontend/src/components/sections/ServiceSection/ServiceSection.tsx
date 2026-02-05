@@ -5,23 +5,27 @@ import { Share2, BarChart3, Video, PlusSquare } from 'lucide-react';
 export default function ServiceSection() {
   const services = [
     {
-      title: "Conteúdo",
+      title: "CONTEÚDO",
+      subtitle: "Criação de conteúdo e gestão de redes sociais",
       description: "Planejamos, criamos e publicamos o conteúdo da sua marca de forma estratégica e consistente. Da ideia inicial à entrega final, nossa equipe cuida de tudo para você ter tranquilidade.",
       icon: <Share2 size={24} />
     },
     {
-      title: "Performance",
-      description: "Não é apenas gestão de tráfego pago. Planejamos, analisamos e otimizamos campanhas em Meta e Google com foco em performance, acompanhando métricas, resultados comerciais e ajustes constantes, sempre alinhados à estratégia e com relatórios claros e objetivos.",
-      icon: <BarChart3 size={24} />
-    },
-    {
-      title: "Audiovisual",
-      description: "Conteúdo com qualidade profissional e alto impacto visual. Roteirizamos, gravamos e editamos com equipe própria, utilizando equipamentos de ponta, iluminação profissional e drone para elevar o posicionamento da sua marca.",
+      title: "AUDIOVISUAL",
+      subtitle: "Captação e produção audiovisual",
+      description: "Vídeos com qualidade profissional e alto impacto visual. Roteirizamos, gravamos e editamos com equipe própria, utilizando equipamentos de ponta, iluminação profissional e drone para elevar o posicionamento da sua marca.",
       icon: <Video size={24} />
     },
     {
-      title: "Complementares",
-      description: "Serviços estratégicos que fortalecem a estrutura digital da sua marca. Atuamos com sites e landing pages, identidade visual e organização de processos comerciais e automações de atendimento.",
+      title: "PERFORMANCE",
+      subtitle: "Gestão de anúncios online em Meta e Google",
+      description: "Não é apenas tráfego pago. Planejamos, analisamos e otimizamos campanhas com foco em performance, acompanhando métricas, resultados comerciais e ajustes constantes, sempre alinhados à estratégia e com relatórios claros e objetivos.",
+      icon: <BarChart3 size={24} />
+    },
+    {
+      title: "SOLUÇÕES DIGITAIS",
+      subtitle: "Serviços que sustentam a estrutura digital",
+      description: "Atuamos com landing pages, identidade visual, organização de processos comerciais e automações de atendimento para fortalecer a base do seu negócio.",
       icon: <PlusSquare size={24} />
     }
   ];
@@ -43,7 +47,6 @@ export default function ServiceSection() {
 
       <div className={styles.grid}>
         {services.map((s, i) => (
-
           <div 
             key={i} 
             className={styles.cardWrapper}

@@ -15,7 +15,12 @@ const teamData = [
     image: "/images/time/Lucas Guirado - Diretor Geral.jpg" 
   },
   { 
-    name: "Lucas Ferine", 
+    name: "Saulo Neto", 
+    role: "Diretor Comercial", 
+    image: "/images/time/Saulo Neto - Diretor Comercial.jpg" 
+  },
+  { 
+    name: "Lucas Ferline", 
     role: "Head de Performance", 
     image: "/images/time/Lucas Ferine - Head de Performance.PNG" 
   },

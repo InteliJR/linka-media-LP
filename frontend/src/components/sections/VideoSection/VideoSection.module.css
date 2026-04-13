@@ -2,32 +2,78 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  
-  padding: 0px 20px 80px; 
+  padding: 0 20px 80px;
 }
+
 .content {
   width: 100%;
-  max-width: 1100px;
+  max-width: 1240px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem; 
-  margin-top: 0; 
+  gap: 2rem;
 }
 
 .title {
+  margin: 0;
   color: #fff;
-  font-size: 2.2rem;
+  font-size: clamp(2.2rem, 4vw, 4rem);
   font-weight: 600;
   text-align: center;
 }
 
+.title span {
+  color: #9272f1;
+}
+
+.layout {
+  --video-width: clamp(300px, 26vw, 360px);
+  --video-height: clamp(533px, 46vw, 640px);
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) var(--video-width) minmax(220px, 1fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.cardsColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: var(--video-height);
+}
+
+.card {
+  padding: 18px 20px;
+  border: 4px solid #9272f1;
+  border-radius: 18px;
+  background: #f5f5f7;
+  color: #202020;
+  box-shadow: 0 0 0 1px rgba(146, 114, 241, 0.15), 0 14px 32px rgba(0, 0, 0, 0.22);
+}
+
+.card p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.45;
+  font-weight: 700;
+}
+
+.highlight {
+  display: inline;
+  padding: 0.08em 0.24em;
+  border-radius: 0.35em;
+  background: rgba(146, 114, 241, 0.3);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
 .videoWrapper {
   width: 100%;
-  max-width: 900px;
-  height: 480px;
-  border-radius: 20px;
+  height: var(--video-height);
+  border-radius: 26px;
   overflow: hidden;
+  background: #000;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
 }
 
@@ -37,12 +83,46 @@
   border: none;
 }
 
-@media (max-width: 768px) {
-  .videoWrapper {
-    height: 60vh; 
-    max-width: 100%;
+@media (max-width: 1100px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
+
+  .videoWrapper {
+    max-width: 360px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 9 / 16;
+    justify-self: center;
+  }
+
+  .cardsColumn {
+    width: 100%;
+    height: auto;
+    gap: 14px;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
   .section {
-    padding: 60px 20px 20px;
+    padding: 40px 16px 56px;
+  }
+
+  .content {
+    gap: 1.5rem;
+  }
+
+  .card {
+    padding: 16px 18px;
+  }
+
+  .card p {
+    font-size: 0.95rem;
+  }
+
+  .videoWrapper {
+    max-width: 320px;
   }
 }

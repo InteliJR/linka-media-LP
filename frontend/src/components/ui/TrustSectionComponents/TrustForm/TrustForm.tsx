@@ -1,16 +1,37 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import emailjs from "@emailjs/browser";
 import styles from "./TrustForm.module.css";
 import Button from "../../Button/Button";
 
-if (typeof window !== "undefined") {
-  emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!);
+interface LeadApiResponse {
+  eventId?: string;
+  message?: string;
+  ok?: boolean;
+  trackingAccepted?: boolean;
 }
 
-const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!;
-const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!;
+function createLeadEventId() {
+  return (
+    globalThis.crypto?.randomUUID?.() ??
+    `lead-${Date.now()}-${Math.round(Math.random() * 1_000_000)}`
+  );
+}
+
+function pushGenerateLeadEvent(eventId: string, pageLocation: string) {
+  if (typeof window === "undefined") {
+    return;
+  }
+
+  window.dataLayer = window.dataLayer ?? [];
+  window.dataLayer.push({
+    event: "generate_lead",
+    event_id: eventId,
+    event_name: "Lead",
+    form_name: "trust_form",
+    page_location: pageLocation,
+  });
+}
 
 export function TrustForm() {
   const [isLoading, setIsLoading] = useState(false);
@@ -23,33 +44,50 @@ export function TrustForm() {
     setSuccessMessage("");
     setErrorMessage("");
 
-    const formData = new FormData(e.currentTarget);
-    const data = Object.fromEntries(formData.entries());
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const pageUrl =
+      typeof window !== "undefined" ? window.location.href : undefined;
+    const eventId = createLeadEventId();
+
+    const payload = {
+      nome: String(formData.get("nome") ?? ""),
+      sobrenome: String(formData.get("sobrenome") ?? ""),
+      empresa: String(formData.get("empresa") ?? ""),
+      email: String(formData.get("email") ?? ""),
+      telefone: String(formData.get("telefone") ?? ""),
+      mensagem: String(formData.get("mensagem") ?? ""),
+      eventId,
+      pageUrl,
+    };
 
     try {
-      const result = await emailjs.send(
-        SERVICE_ID,
-        TEMPLATE_ID,
-        {
-          nome: data.nome,
-          sobrenome: data.sobrenome,
-          empresa: data.empresa,
-          telefone: data.telefone,
-          mensagem: data.mensagem,
-          to_email: "contato@linkamidia.com.br",
-        }
+      const response = await fetch("/api/lead", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const result = (await response.json()) as LeadApiResponse;
+
+      if (!response.ok || !result.ok) {
+        throw new Error(
+          result.message ?? "Nao foi possivel enviar a sua mensagem."
+        );
+      }
+
+      pushGenerateLeadEvent(result.eventId ?? eventId, pageUrl ?? "");
+      setSuccessMessage(
+        "Sua mensagem foi enviada com sucesso! Entraremos em contato em breve."
       );
 
-      console.log("Email enviado com sucesso:", result);
-      setSuccessMessage("Sua mensagem foi enviada com sucesso! Entraremos em contato em breve.");
-      
-      (e.target as HTMLFormElement).reset();
-
+      form.reset();
       setTimeout(() => setSuccessMessage(""), 5000);
     } catch (error) {
-      console.error("Erro ao enviar email:", error);
+      console.error("Erro ao enviar lead:", error);
       setErrorMessage("Ocorreu um erro ao enviar a mensagem. Tente novamente.");
-      
       setTimeout(() => setErrorMessage(""), 5000);
     } finally {
       setIsLoading(false);
@@ -96,6 +134,20 @@ export function TrustForm() {
           id="empresa"
           name="empresa"
           placeholder="Nome da empresa"
+          className={styles.input}
+          disabled={isLoading}
+        />
+      </div>
+
+      <div className={styles.group}>
+        <label htmlFor="email" className={styles.srOnly}>
+          E-mail
+        </label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          placeholder="E-mail (opcional)"
           className={styles.input}
           disabled={isLoading}
         />

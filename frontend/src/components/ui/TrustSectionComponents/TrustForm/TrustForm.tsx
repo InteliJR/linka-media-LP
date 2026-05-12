@@ -1,16 +1,8 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import emailjs from "@emailjs/browser";
 import styles from "./TrustForm.module.css";
 import Button from "../../Button/Button";
-
-if (typeof window !== "undefined") {
-  emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!);
-}
-
-const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!;
-const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!;
 
 export function TrustForm() {
   const [isLoading, setIsLoading] = useState(false);
@@ -19,37 +11,65 @@ export function TrustForm() {
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const form = e.currentTarget;
+
     setIsLoading(true);
     setSuccessMessage("");
     setErrorMessage("");
 
-    const formData = new FormData(e.currentTarget);
+    const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
 
     try {
-      const result = await emailjs.send(
-        SERVICE_ID,
-        TEMPLATE_ID,
-        {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
           nome: data.nome,
           sobrenome: data.sobrenome,
           empresa: data.empresa,
           telefone: data.telefone,
           mensagem: data.mensagem,
-          to_email: "contato@linkamidia.com.br",
-        }
-      );
+        }),
+      });
+
+      const result = (await response.json().catch(() => null)) as
+        | { message?: string; details?: string }
+        | null;
+
+      if (!response.ok) {
+        const error = new Error(
+          result?.message || "Ocorreu um erro ao enviar a mensagem."
+        ) as Error & { status?: number; details?: string };
+
+        error.status = response.status;
+        error.details = result?.details;
+        throw error;
+      }
 
       console.log("Email enviado com sucesso:", result);
       setSuccessMessage("Sua mensagem foi enviada com sucesso! Entraremos em contato em breve.");
-      
-      (e.target as HTMLFormElement).reset();
+
+      form.reset();
 
       setTimeout(() => setSuccessMessage(""), 5000);
     } catch (error) {
-      console.error("Erro ao enviar email:", error);
-      setErrorMessage("Ocorreu um erro ao enviar a mensagem. Tente novamente.");
-      
+      const contactError = error as Error & { status?: number; details?: string };
+
+      if (process.env.NODE_ENV === "development") {
+        console.warn("Falha no envio do formulario:", {
+          message: contactError.message,
+          status: contactError.status,
+          details: contactError.details,
+        });
+      }
+
+      setErrorMessage(
+        contactError.message || "Ocorreu um erro ao enviar a mensagem. Tente novamente."
+      );
+
       setTimeout(() => setErrorMessage(""), 5000);
     } finally {
       setIsLoading(false);
